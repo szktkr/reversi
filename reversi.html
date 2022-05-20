@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>システム開発　制作物２　リバーシ</title>
+    </head>
+        <body>
+            <canvas width="640" height="640" id="can1"></canvas>
+            <script>
+                var canvas = document.getElementById('can1');
+                var context = canvas.getContext('2d');
+                //色の指定
+                context.fillStyle = '#009d5d';
+                context.strokeStyle = '#000000';
+                //外枠と背景
+                context.fillRect(0,0,400,400);
+                context.strokeRect(0,0,400,400);
+                //縦線
+                context.beginPath();
+                context.moveTo(50,0);
+                context.lineTo(50,400);
+                context.moveTo(100,0);
+                context.lineTo(100,400);
+                context.moveTo(150,0);
+                context.lineTo(150,400);
+                context.moveTo(200,0);
+                context.lineTo(200,400);
+                context.moveTo(250,0);
+                context.lineTo(250,400);
+                context.moveTo(300,0);
+                context.lineTo(300,400);
+                context.moveTo(350,0);
+                context.lineTo(350,400);
+                //横線
+                context.moveTo(0,50);
+                context.lineTo(400,50);
+                context.moveTo(0,100);
+                context.lineTo(400,100);
+                context.moveTo(0,150);
+                context.lineTo(400,150);
+                context.moveTo(0,200);
+                context.lineTo(400,200);
+                context.moveTo(0,250);
+                context.lineTo(400,250);
+                context.moveTo(0,300);
+                context.lineTo(400,300);
+                context.moveTo(0,350);
+                context.lineTo(400,350);
+                context.stroke();
+            </script>
+        </body>
+</html>
