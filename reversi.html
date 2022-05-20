@@ -5,9 +5,9 @@
         <title>システム開発　制作物２　リバーシ</title>
     </head>
         <body>
-            <canvas width="640" height="640" id="can1"></canvas>
+            <canvas width="640" height="640" id="canvas"></canvas>
             <script>
-                var canvas = document.getElementById('can1');
+                var canvas = document.getElementById('canvas');
                 var context = canvas.getContext('2d');
                 //色の指定
                 context.fillStyle = '#009d5d';
@@ -48,7 +48,13 @@
                 context.lineTo(400,350);
                 context.stroke();
 
-                context.strokeText(a,10,10);
+                canvas.addEventListener('click', onClick, false);
+                function onClick (e) {
+                    var x = y = 0;
+                    x = e.clientX - canvas.left;
+                    y = e.clientY - canvas.top;
+                
+                };
             </script>
         </body>
 </html>
